@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Cross Browser Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.ecommerce.listeners.TestListener"/>
+    <listener class-name="com.ecommerce.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Edge Tests(failed)">
+    <parameter name="xmlBrowser" value="edge"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.ecommerce.tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- com.ecommerce.tests.LoginTest -->
+    </classes>
+  </test> <!-- Edge Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Chrome Tests(failed)">
+    <parameter name="xmlBrowser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.ecommerce.tests.LoginTest">
+        <methods>
+          <include name="verifyCheckout"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyOrderPlaced"/>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- com.ecommerce.tests.LoginTest -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+</suite> <!-- Failed suite [Cross Browser Suite] -->

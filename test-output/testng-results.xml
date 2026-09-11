@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-07T03:42:28 IST" name="Default suite" finished-at="2026-09-07T03:42:29 IST" duration-ms="862">
+    <groups>
+    </groups>
+    <test started-at="2026-09-07T03:42:28 IST" name="Default test" finished-at="2026-09-07T03:42:29 IST" duration-ms="862">
+      <class name="com.ecommerce.automation.api.UserApiTest">
+        <test-method signature="verifyCreateUserWithDbCheck()[pri:0, instance:com.ecommerce.automation.api.UserApiTest@548d708a]" started-at="2026-09-07T03:42:28 IST" name="verifyCreateUserWithDbCheck" finished-at="2026-09-07T03:42:29 IST" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateUserWithDbCheck -->
+        <test-method signature="verifyGetUsersList()[pri:0, instance:com.ecommerce.automation.api.UserApiTest@548d708a]" started-at="2026-09-07T03:42:29 IST" name="verifyGetUsersList" finished-at="2026-09-07T03:42:29 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetUsersList -->
+      </class> <!-- com.ecommerce.automation.api.UserApiTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
