@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
         // यहाँ जानबूझकर गलत टाइटल डाला गया है ताकि टेस्ट फेल हो और स्क्रीनशॉट कैप्चर हो सके
         Assert.assertEquals(
                 inventoryPage.getPageTitle(),
-                "Products"
+                "wrongtitle"
         );
     }
 
