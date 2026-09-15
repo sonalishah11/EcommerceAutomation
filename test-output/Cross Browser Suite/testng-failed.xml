@@ -16,7 +16,10 @@
       <class name="com.ecommerce.tests.LoginTest">
         <methods>
           <include name="setUp"/>
+          <include name="verifyCheckout"/>
           <include name="tearDown"/>
+          <include name="verifyOrderPlaced"/>
+          <include name="verifyAddProductToCart"/>
           <include name="verifyLogin"/>
         </methods>
       </class> <!-- com.ecommerce.tests.LoginTest -->
@@ -35,6 +38,7 @@
           <include name="verifyCheckout"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="verifyAddProductToCart"/>
           <include name="verifyOrderPlaced"/>
           <include name="verifyLogin"/>
         </methods>

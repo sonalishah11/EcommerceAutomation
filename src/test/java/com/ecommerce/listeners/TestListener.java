@@ -18,6 +18,9 @@ public class TestListener implements ITestListener {
         // synchronized block: इससे दोनों थ्रेड्स एक साथ रिपोर्ट ऑब्जेक्ट को क्रैश नहीं कर पाएंगे
         synchronized (TestListener.class) {
             if (extent == null) {
+                // 🛑 Jenkins में रिपोर्ट को रंगीन, सुंदर और स्क्रीनशॉट दिखाने के लिए सुरक्षा पॉलिसी को बाईपास किया
+                System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "");
+
                 ExtentSparkReporter sparkReporter = new ExtentSparkReporter("test-output/ExtentReport.html");
                 sparkReporter.config().setDocumentTitle("Ecommerce Automation Report");
                 sparkReporter.config().setReportName("Cross Browser Test Results");
@@ -66,7 +69,7 @@ public class TestListener implements ITestListener {
     public void onFinish(ITestContext context) {
         synchronized (TestListener.class) {
             if (extent != null) {
-                extent.flush();
+                extent.flush(); // यह टेस्ट खत्म होने पर रिपोर्ट को सेव और अपडेट करता है
             }
         }
     }

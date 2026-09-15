@@ -30,7 +30,7 @@ public class LoginTest extends BaseTest {
                 ConfigReader.getProperty("password")
         );
 
-        // यहाँ जानबूझकर गलत टाइटल डाला गया है ताकि टेस्ट फेल हो और स्क्रीनशॉट कैप्चर हो सके
+        // we entered wrong title intentionally because want to capture screenshot during failled the test case
         Assert.assertEquals(
                 inventoryPage.getPageTitle(),
                 "wrongtitle"
